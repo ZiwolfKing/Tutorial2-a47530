@@ -6,10 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     Animator m_Animator;
     Vector3 m_Movement;
+    public float turnSpeed;
+    
 
     void Start ()
     {
         m_Animator = GetComponent<Animator>();
+        
     }
 
     void Update ()
@@ -24,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_Animator.SetBool("IsWalking", isWalking);
+
+        Vector3 desiredForward = Vector3.RotateTowards (transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
     }
 }
 

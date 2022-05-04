@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float horizontal = Input.GetAxis ("Horizontal");
+    Vector3 m_Movement;
+
     // Start is called before the first frame update
     void Start()
     {

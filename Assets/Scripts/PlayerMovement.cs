@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start ()
     {
-        
+        m_Animator = GetComponent<Animator>();
     }
 
     void Update ()
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         bool hasHorizontalInput = !Mathf.Approximately (horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
+        m_Animator.SetBool("IsWalking", isWalking);
     }
 }
 

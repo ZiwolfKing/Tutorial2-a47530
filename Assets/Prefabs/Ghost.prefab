@@ -649,6 +649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02bbd55e33293c41bbf1bf0ead6925a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 3999928694570695310}
+  waypoints: []
 --- !u!1 &7290980383023608177
 GameObject:
   m_ObjectHideFlags: 0
